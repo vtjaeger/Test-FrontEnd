@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const InputPassword = document.querySelector(".password-input");
 
     function login() {
-        fetch("http://localhost:8080/login-teste", {
+        fetch("http://localhost:8080/login", {
             headers: {
                 'Accept' : 'application/json',
                 'Content-Type' : 'application/json'
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(function(response) {
             if (response.ok) {
-                window.location.href = "/home/home.html"; // Redirecionar para a página de sucesso
+                window.location.href = "/home/home.html";
             } else {
                 alert("Usuário não encontrado ou senha incorreta.");
             }
